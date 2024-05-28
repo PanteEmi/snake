@@ -16,7 +16,7 @@ struct UDP_client create_socket(const unsigned int port, const char* ip_addr)
     memset(&client_addr, 0, sizeof(client_addr));
 
     server_addr.sin_family = AF_INET; // IPv4
-    server_addr.sin_addr.s_addr = inet_addr(ip_addr); // Any IP address: "192.168.208.75"
+    server_addr.sin_addr.s_addr = htonl(INADDR_ANY); // Any IP address: "192.168.208.75"
     server_addr.sin_port = htons(port); // Port number: 8080
 
     // Bind the socket with the server address

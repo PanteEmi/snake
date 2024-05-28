@@ -77,6 +77,7 @@ int main(int argc, char *argv[])
             receive_from_socket(client, instructions);
         }
 
+
         if(!end_game){
             if(instructions[0] == '2' && last_action.x != -cell_size){
                 last_action.x = cell_size;

@@ -52,7 +52,7 @@ int serial_read(int fd, char *buffer){
         close(fd);
         return 1;
     }
-    printf("Received %d bytes: %s\n", bytes_read, buffer);
+    //printf("Received %d bytes: %s\n", bytes_read, buffer);
     return bytes_read;
 }
 
